@@ -1,0 +1,69 @@
+@import '../config';
+
+.cards-section {
+   background: rgba(30, 30, 30, .65);
+   min-height: 100vh;
+
+   h1 {
+      text-align: center;
+      padding-top: 1em;
+      padding-bottom: .2em;
+      font-family: 'Hubballi', cursive;
+      border-bottom: 2px solid white;
+      margin:0 auto;
+      width: max-content;
+      font-size: clamp(1rem, 5vw, 1.5rem);
+   }
+
+   div.see-more {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+         font-family: 'Hubballi', cursive;
+         font-size: clamp(1rem, 5vw, 1.5rem);
+         margin-bottom: .5em;
+
+         span { 
+            color:coral; 
+            transition: .3s;
+            cursor: pointer;
+            position: relative;
+
+            &::before,
+            &::after {
+               transition: .3s;
+               content: '';
+               position: absolute;
+               left:50%;
+               width: 100%;
+               height: 2px;
+               background: coral;
+               transform: translateX(-50%) scaleX(0);
+            }
+
+            &::before { top:0; }
+            &::after { bottom:-2px; }
+
+            &:hover {
+               color: rgb(250, 202, 184); 
+               &::after { transform: translateX(-50%) scaleX(1); }
+               &::before { transform: translateX(-50%) scaleX(1); }
+            }
+         }
+      }
+
+      img {
+         width: 200px;
+      }
+   }
+}
+
+@media (max-width: 480px){
+   .cards-section {
+      div.see-more {
+         h2 { text-align: center; span { display: block; } }
+      }
+   }
+} 

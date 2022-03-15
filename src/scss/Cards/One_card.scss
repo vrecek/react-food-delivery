@@ -1,0 +1,106 @@
+@import '../config';
+
+.cards-cont {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 97vw;
+   max-width: 100%;
+   margin:3em auto;
+   position: relative;
+
+   .card-outer {
+      width: 300px;
+      max-width: 95%;
+      margin:0 .25em .50em .25em;
+      height: 400px;
+      max-height: 135vw;
+      transition: .5s;
+
+      &.scale {
+         transform: scale(0);
+      }
+   }
+
+   .card-inner {
+      border: 1px solid $light-text;
+      width: 300px;
+      height: 400px;
+      max-height: 135vw;
+      position: relative;
+      transition: .5s;
+
+      span.arrow-icon {
+         position: absolute;
+         top:50%;
+         transform: translateY(-50%);
+         left:0;
+         cursor: pointer;
+         transition: .5s;
+         @include flex-c-c;
+
+         &:hover svg {
+            color: rgb(83, 83, 255);
+            filter: blur(1px);
+         }
+
+         svg { 
+            width: 35px; 
+            height: 35px; 
+            color: $light-text; 
+            filter: drop-shadow(0 0  3px black); 
+            transition: .3s; 
+            pointer-events: none; 
+         }
+      }
+
+      h2 {
+         font-family: 'Hubballi', cursive;
+         text-align: center;
+         border-bottom: 2px solid $light-text;
+         display: block;
+         padding:.3em 0;
+         background: rgba(65, 105, 225, 0.6);
+         font-size: clamp(.9rem, 4vw, 1.5rem);
+      }
+
+      button {
+         position: absolute;
+         left:50%;
+         transform: translateX(-50%);
+         bottom:10%;
+         padding: clamp(.2em, 1.5vw, .7em) 0;
+         width: 35%;
+         min-width: 70px;
+         border:3px solid royalblue;
+         border-radius: .3em;
+         outline: 0;
+         background: rgb(18, 47, 65);
+         font-family: 'Hubballi', cursive;
+         color: $light-text;
+         font-size: 1rem;
+         cursor: pointer;
+         box-shadow: 0 0 2px black, 0 0 4px black;
+         transition: .3s;
+
+         &:hover {
+            background: rgb(30, 81, 112);
+            border-color: rgb(0, 11, 44);
+            box-shadow: 0;
+         }
+      }
+   }
+}
+
+@media (max-width: 768px){
+   .cards-cont {
+      .card-outer,
+      .card-inner {
+         width:45vw;
+         height: 60vw;
+      }
+
+      .card-inner { span.arrow-icon { display: none; } }
+   }
+}

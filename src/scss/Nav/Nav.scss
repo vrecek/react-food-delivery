@@ -1,0 +1,160 @@
+@import '../config';
+
+nav.main-nav {
+   background: $dark-bg;
+   border-bottom: 1px solid rgb(146, 146, 146);
+   @include flex-sa-c;
+   position: relative;
+   color: $light-text;
+
+   figure {
+      height: 60px;
+      width: 20%;
+      min-width: min-content;
+
+      img { height: 100%; display: block; margin:0 auto; }
+   }
+
+   ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      width: 60%;
+
+      li {
+         transition: .2s;
+         margin:0 clamp(.2em, 2vw, 1em);
+         margin:0 1em;
+         cursor: pointer;
+         font-weight: 400;
+         position: relative;
+         font-size: clamp(.8rem, 3vw, 1rem);
+
+         svg {
+            position: absolute;
+            top:0;
+            opacity: 0;
+            left:50%;
+            transform: translateX(-50%);
+            transition: .2s;
+            color: goldenrod;
+         }
+         
+         &.ul-order {
+            color:cornflowerblue;
+            text-shadow: 0 0 2px royalblue, 0 0 4px royalblue;
+         }
+
+         &:hover {
+            color: goldenrod;
+            text-shadow: 1px 1px 2px gold, 0 0 3px gold;
+
+            svg {
+               opacity: 1;
+               top:100%;
+            }
+         }
+      }
+   }
+
+   section {
+      width: 20%;
+      min-width: min-content;
+      @include flex-c-c;
+
+      div {
+         width: 25px;
+         height: 25px;
+         position: relative;
+         cursor: pointer;
+         margin-right: .5em;
+
+         $arr: (
+            1: "15%",
+            2: "50%",
+            3: "85%"
+         );
+
+         span {
+            position: absolute;
+            width: 100%;
+            height: 1.5px;
+            left:0;
+            background: $light-text;
+            pointer-events: none;
+            transition: .5s;
+
+            @each $v, $i in $arr {
+               &:nth-child(#{$v}) {
+                  top: #{$i};
+               }
+            }
+         }
+      }
+
+      h5 {
+         margin:0 .5em;
+         cursor: pointer;
+         transition: .2s;
+         padding: .5em 1em;
+         white-space: nowrap;
+
+         &.sign-h5 {
+            border: 1px solid blue;
+            border-radius: .2em;
+            font-weight: 600;
+            background-color: #404040;
+            font-family: 'Hubballi', cursive;
+            
+            &:hover {
+               box-shadow: 0 0 2px blue, 0 0 4px blue, 0 0 8px blue, 0 0 16px blue;
+               color: orange;
+            }
+         }
+
+         &.join-h5 {
+            border: 1px solid whitesmoke;
+            border-color: transparent transparent transparent whitesmoke;
+            
+            &:hover {
+               background: #505050;
+               border: 1px solid whitesmoke;
+               border-color: whitesmoke;
+               border-radius: .2em;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   nav.main-nav {
+      padding: 1em 0;
+      figure { display: none; }
+   }
+}
+
+@media (max-width: 480px) {
+   nav.main-nav {
+      ul { 
+         li {
+            align-items: center;
+            display: flex;
+
+            p { display: none; }
+
+            svg {
+               width: 22px;
+               height: 22px;
+               opacity: 1;
+               position: static; 
+               transform: translateX(0);
+            }
+
+            &.ul-order svg { color:cornflowerblue; width: 24px; height: 24px; filter: drop-shadow(0 0 2px blue); }
+         }
+      }
+
+      section h5 { display: none; }
+   }
+} 

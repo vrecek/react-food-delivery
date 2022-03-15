@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import './css/index.css'
+import Nav from "./components/Nav/Nav";
+import Header from './components/Header/Header';
+import Cards from './components/Cards/Cards';
+import StepsCont from './components/Steps/StepsCont';
 
 function App() {
+  // lewo step 1 prawo 2 lewo 3 end
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Nav />
+      <Header />
+      <Cards />
+      <StepsCont />
+    </>
   );
 }
 

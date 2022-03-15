@@ -1,0 +1,40 @@
+@import '../config';
+
+.step-counter {
+   margin: 3em 0;
+   @include flex-c-c;
+
+   .fill {
+      @include flex-c-c;
+      width: max-content;
+      position: relative;
+
+      mark {
+         position: absolute;
+         height: 100%;
+         width: 0;
+         left:0;
+         top:0;
+         background: #707070;
+         mix-blend-mode: color;
+         transition: .5s;
+      }
+   }
+
+   div {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(54deg, rgba(215,198,0,1) 30%, rgba(213,167,0,1) 59%);
+      border: 2px solid orange;
+      color:white;
+      text-shadow: 0 0 1px black, 0 0 2px black, 0 0 3px black;
+      font-weight: 700;
+      @include flex-c-c;
+   }
+
+   span {
+      height: 5px;
+      width: 30px;
+      background: yellow;
+   }
+}
