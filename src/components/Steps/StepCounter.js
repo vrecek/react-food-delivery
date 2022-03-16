@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../css/StepCounter.css'
 
-const StepCounter = ({ curr, nums, reference }) => {
+const StepCounter = ({ nums, reference }) => {
    const arr = [...Array(nums).keys()].map(x => x + 1)
 
    return (
