@@ -1,0 +1,35 @@
+@import '../config';
+
+.comment-section {
+   background: $dark-bg-t;
+   padding-bottom: 10em;
+
+   h1 {
+      padding-top: 2em;
+      font-family: 'Hubballi';
+      text-align: center;
+   }
+
+   h2 {
+      border-bottom: 1px solid antiquewhite;
+      color:antiquewhite;
+      width: max-content;
+      max-width: 80%;
+      text-align: center;
+      margin: 0 auto;
+      font-family: 'Hubballi';
+      margin-bottom: 2em;
+      font-size: 1rem;
+   }
+
+   section.outer-section {
+      background: #303030;
+      cursor: grabbing;
+
+      section {
+         @include flex-c-c;
+         padding: 1em 0;
+         width: max-content;
+      }  
+   }
+}

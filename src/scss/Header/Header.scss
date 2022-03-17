@@ -1,7 +1,7 @@
 @import '../config';
 
 .entry-header {
-   background: rgba(30, 30, 30, .9);
+   background: $darker-bg-t;
    height: calc(100vh - 61px);
    @include flex-sa-c;
    position: relative;

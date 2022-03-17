@@ -1,0 +1,95 @@
+@import '../config';
+
+.comment {
+   width: clamp(240px, 30vw, 350px);
+   height: clamp(300px, 31vw,400px);
+   background: $darker-bg;
+   border-radius: 1.5em .1em;
+   pointer-events: none;
+   user-select: none;
+   margin:0 2em;
+   border: 1px solid #505050;
+   display: flex;
+   flex-direction: column;
+
+   div.author {
+      height: clamp(70px, 10vw, 140px);
+      background: #252525;
+      @include flex-c-c;
+      flex-direction: column;
+      border-radius: 1.5em .1em 0 0;
+
+      figcaption {
+         font-family: 'Hubballi', cursive;
+         text-transform: uppercase;
+         font-size: clamp(.9rem, 3vw, 1.1rem);
+         text-shadow: 0 0 1px white, 0 0 2px white;
+      }
+
+      figure {
+         width: clamp(50px, 7.5vw, 93px);
+         height: clamp(50px, 7.5vw, 93px);
+         position: relative;
+         border-radius: 50%;
+         overflow: hidden;
+
+         img { 
+            position: absolute;  
+            left:50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+            height: 100%;
+         }
+      }
+   }
+
+   div.text {
+      position: relative;
+      background: #272727;
+      width: 85%;
+      height: 55%;
+      margin: auto;
+      border-radius: 0 .3em 0 .3em;
+
+      p {
+         padding:1em;
+         text-align: center;
+         font-family: 'Hubballi', cursive;
+         font-size: clamp(.9rem, 3vw, 1rem);
+      }
+
+      svg {
+         position: absolute;
+         width: clamp(15px, 3vw, 25px);
+         height: clamp(15px, 3vw, 25px);
+
+         &:first-child {
+            left:0;
+            transform: translate(-50%, -50%);
+         }
+
+         &:last-child {
+            right: 0;
+            bottom: 0;
+            transform: translate(50%, 50%);
+         }
+      }
+
+      div {
+         position: absolute;
+         bottom: 0;
+         @include flex-c-c;
+
+         span {
+            display: flex;
+            
+            svg {
+               position: static;
+               transform: none !important;
+               width: clamp(15px, 2vw, 20px);
+               height: clamp(15px, 2vw, 20px);
+            }
+         }
+      }
+   }
+}

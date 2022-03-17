@@ -1,0 +1,29 @@
+@import '../config';
+
+.sponsor-cont {
+   background: #303030f5;
+   padding:1em 0 2em 0;
+
+   h1 {
+      text-align: center;
+      font-size: 1rem;
+      font-family: 'Hubballi', cursive;
+      padding-bottom: 1em;
+   }
+
+   div {
+      @include flex-sa-c;
+
+      img {
+         width: 10%;
+         min-width: 40px;
+         cursor: pointer;
+         opacity: .4;
+         transition:.3s;
+
+         &:hover {
+            opacity: 1;
+         }
+      }
+   }
+}

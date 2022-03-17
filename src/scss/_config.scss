@@ -3,6 +3,9 @@ $light-text: white;
 $dark-bg: #303030;
 $darker-bg: #202020;
 
+$dark-bg-t: rgba(30, 30, 30, .65);
+$darker-bg-t: rgba(30, 30, 30, .9);
+
 @mixin flex-c-c {
    display: flex;
    justify-content: center;

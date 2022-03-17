@@ -1,0 +1,93 @@
+@import '../config';
+
+.ship-section {
+   height: 100vh;
+   background: $dark-bg-t;
+   
+   @include flex-sa-c;
+
+   figure {
+      width: 40%;
+      height: 37vw;
+      position: relative;
+      background: green;
+
+      span {
+         width: 8px;
+         height: 8px;
+         border-radius: 50%;
+         background: red;
+         position: absolute;
+      }
+
+      img {
+         width: 100%;
+      }
+   }
+
+   section {
+      width: 40%;
+      
+      h1 {
+         font-family: 'Hubballi', cursive;
+         font-size: clamp(1.1rem, 2vw, 2rem);
+         color:rgb(183, 238, 238);
+         text-shadow: 0 0 2px azure;
+         @include flex-sb-c;
+         span {
+            border-bottom: 2px solid orangered;
+            color:orange;
+            text-shadow: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+         }
+      }
+
+      p {
+         margin:2em 0;
+         font-size: clamp(.8rem, 3vw, 1rem)
+      }
+
+      div {
+         @include flex-sb-c;
+
+         h2,
+         h3 {
+            font-family: 'Hubballi', cursive;
+            font-size: clamp(1rem, 4vw, 1.2rem);
+            color:rgb(240, 173, 93);
+
+            span {
+               display: block;
+               text-align: center;
+               color:rgb(240, 137, 99);
+               font-weight: 700;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 768px){
+   .ship-section {
+      flex-direction: column;
+
+      section {
+         h1 {
+            justify-content: center;
+
+            span { margin-left: .5em; }
+
+            svg { margin:0 .5em; }
+         }
+         width: 90%;
+      }
+
+      figure {
+         height: 60vw;
+         width: auto;
+         min-height: 240px;
+
+         img { height: 100%; width: auto; }
+      }
+   }
+}
