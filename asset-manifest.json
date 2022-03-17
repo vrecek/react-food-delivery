@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/react-food-delivery/static/css/main.e25867f8.css",
+    "main.js": "/react-food-delivery/static/js/main.491c637c.js",
+    "static/js/787.61db7154.chunk.js": "/react-food-delivery/static/js/787.61db7154.chunk.js",
+    "static/media/s1.png": "/react-food-delivery/static/media/s1.4feb8c40fef34bdc4a25.png",
+    "static/media/s4.png": "/react-food-delivery/static/media/s4.2d5d46aa528a845dae4b.png",
+    "static/media/author.png": "/react-food-delivery/static/media/author.4be37d6969e75ba004d5.png",
+    "static/media/europe.png": "/react-food-delivery/static/media/europe.77e9e3a1421ea879fbc6.png",
+    "static/media/s2.png": "/react-food-delivery/static/media/s2.49b1a3cc6952ec0c83ea.png",
+    "static/media/s3.png": "/react-food-delivery/static/media/s3.7b2be89246827f3a7ab5.png",
+    "static/media/logo.png": "/react-food-delivery/static/media/logo.1a53137bb3ab9e7ec36a.png",
+    "static/media/r1.png": "/react-food-delivery/static/media/r1.129350938ac67c522c71.png",
+    "static/media/r4.png": "/react-food-delivery/static/media/r4.0ab87116fec9130770cb.png",
+    "static/media/header.png": "/react-food-delivery/static/media/header.8220bc06d6a9be6688e4.png",
+    "static/media/card_more.png": "/react-food-delivery/static/media/card_more.388f5eada8ada2f8ada2.png",
+    "static/media/r2.png": "/react-food-delivery/static/media/r2.6d8999cc27cf78f16021.png",
+    "static/media/l2.png": "/react-food-delivery/static/media/l2.569de2f95ab118106834.png",
+    "static/media/l1.png": "/react-food-delivery/static/media/l1.bc41f5aea78c6b9b7849.png",
+    "static/media/r3.png": "/react-food-delivery/static/media/r3.35a5d7df631823c42889.png",
+    "index.html": "/react-food-delivery/index.html",
+    "main.e25867f8.css.map": "/react-food-delivery/static/css/main.e25867f8.css.map",
+    "main.491c637c.js.map": "/react-food-delivery/static/js/main.491c637c.js.map",
+    "787.61db7154.chunk.js.map": "/react-food-delivery/static/js/787.61db7154.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e25867f8.css",
+    "static/js/main.491c637c.js"
+  ]
+}
