@@ -7,6 +7,7 @@ import ShipmentSection from './components/Shipment/ShipmentSection';
 import DeliverSection from './components/Shipment/DeliverSection';
 import Sponsors from './components/Sponsors/Sponsors';
 import CommentSection from './components/Comments/CommentSection';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
       <Sponsors />
 
       <CommentSection />
+
+      <Footer />
     </div>
   );
 }

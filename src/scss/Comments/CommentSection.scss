@@ -2,15 +2,18 @@
 
 .comment-section {
    background: $dark-bg-t;
-   padding-bottom: 10em;
+   padding:4em 0 5em 0;
+   
 
    h1 {
-      padding-top: 2em;
       font-family: 'Hubballi';
       text-align: center;
+      font-size: 1.7rem;
+      margin-bottom: .1em;
    }
 
-   h2 {
+   h2,
+   h3 {
       border-bottom: 1px solid antiquewhite;
       color:antiquewhite;
       width: max-content;
@@ -18,8 +21,17 @@
       text-align: center;
       margin: 0 auto;
       font-family: 'Hubballi';
-      margin-bottom: 2em;
       font-size: 1rem;
+   }
+
+   h3 {
+      margin: 1em auto;
+      color: aquamarine;
+      border:0;
+      transition: .3s;
+      cursor: pointer;
+
+      &:hover { color: aqua; }
    }
 
    section.outer-section {

@@ -74,7 +74,7 @@ const CommentSection = () => {
          return
       }
 
-      px = side === 'left' ? px - 5 : px + 5
+      px = side === 'left' ? px - 15 : px + 15
 
       t.style.transform = `translateX(${ px }px`
       scale(t, 'touch')
@@ -113,6 +113,7 @@ const CommentSection = () => {
       <section className='comment-section'>
          <h1>Most popular opinions</h1>
          <h2>Leaving a comment will improve our future services</h2>
+         <h3>View all comments or write one yourself</h3>
 
          <section onTouchMove={ touchMove } className='outer-section' onMouseDown={ mouseDown }>
             <section ref={ startScale } className='inner-section'>

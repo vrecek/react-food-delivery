@@ -1,0 +1,88 @@
+@import '../config';
+
+footer {
+   background: $dark-bg;
+   padding:5em;
+
+   section {
+      @include flex-sb-c;
+
+      &:first-of-type { margin-bottom: 2em; }
+
+      figure {
+         width: 20%;
+         min-width: 100px;
+
+         img { width: 100%; margin: 0 auto; display: block }
+      }
+
+      nav {
+         @include flex-sa-c;
+         width: 50%;
+         min-width: max-content;
+         border-left: 2px solid coral;
+         border-right: 2px solid coral;
+         padding:0 1em;
+
+         ul {
+            list-style: none;   
+            margin:0 .5em;  
+
+            li {
+               font-family: 'Hubballi', cursive;
+
+               &:first-child {
+                  font-size: clamp(1rem, 5vw, 2rem);      
+                  color:coral;  
+                  margin-bottom: .5em;
+               }
+
+               &:not(li:first-child) {
+                  cursor: pointer;
+                  transition: .3s;
+                  font-size: clamp(.9rem, 6vw, 1rem);
+                  margin-bottom: .2em;
+
+                  &:hover { color:royalblue; }
+               }
+            }
+         }
+      }
+
+      p {
+         text-align: center;
+         font-family: 'Hubballi', cursive;
+         margin: .5em 0;
+      }
+
+      span, a {
+         cursor: pointer;
+         color: white;
+         text-decoration: none;
+
+         &:hover svg {
+            color: cornflowerblue;
+         }
+
+         svg {
+            width: 30px;
+            height: 30px;
+            transition: .3s;
+         }
+      }
+   }
+}
+
+@media (max-width: 768px){
+   footer {
+      padding:1em 0;
+
+      section {
+         flex-direction: column;
+
+         nav {
+            margin:1em 0;
+         }
+      }
+   }
+}

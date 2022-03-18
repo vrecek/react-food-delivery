@@ -46,7 +46,7 @@ const DeliverSection = () => {
                   <input type='range' min='2007' max='2022' defaultValue='2022' onInput={ rangeSlider } />
                </div>
 
-               <h3>Customers: <span>2103</span></h3>
+               <h3>Customers: <span>18536</span></h3>
             </section>
          </article>
 
