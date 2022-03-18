@@ -10,7 +10,7 @@ import CommentSection from './components/Comments/CommentSection';
 
 function App() {
   return (
-    <>
+    <div className='wrap-html'>
       <Nav />
 
       <Header />
@@ -25,7 +25,7 @@ function App() {
       <Sponsors />
 
       <CommentSection />
-    </>
+    </div>
   );
 }
 

@@ -26,7 +26,7 @@ const Comment = ({ stars, name, avatar, text }) => {
          </div>
 
          <div className='text'>
-            <FaQuoteLeft />
+            <FaQuoteRight />
 
             <p> { text } </p>
 
@@ -43,7 +43,7 @@ const Comment = ({ stars, name, avatar, text }) => {
                <span> <AiFillStar /> </span>
             </div>
 
-            <FaQuoteRight />
+            <FaQuoteLeft />
          </div>
       </article>
    ) 

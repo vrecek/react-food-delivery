@@ -26,7 +26,7 @@
       background: #303030;
       cursor: grabbing;
 
-      section {
+      section.inner-section {
          @include flex-c-c;
          padding: 1em 0;
          width: max-content;
