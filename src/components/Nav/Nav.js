@@ -5,8 +5,12 @@ import { BsFillHouseDoorFill } from 'react-icons/bs'
 import { MdContactPage } from 'react-icons/md'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import Menu from './Menu'
+import { useRef, useEffect } from 'react'
 
 const Nav = () => {
+   const navRef = useRef()
+   let currscrl = 0
+
    const showMenu = e => {
       const p = e.target
       const m = e.target.parentElement.children[3]
@@ -27,8 +31,21 @@ const Nav = () => {
       m.style.transform = `translateX(${ active ? 0 : 100 }%)`
    }
 
+   useEffect(() => {
+      window.addEventListener('scroll', () => {
+         if(window.scrollY > currscrl || window.scrollY <= 100) {
+            navRef.current.style.position = 'relative'
+   
+         }else if(window.scrollY < currscrl) {
+            navRef.current.style.position = 'fixed'
+         }
+   
+         currscrl = window.scrollY
+      })
+   })
+
    return (
-      <nav className='main-nav'>
+      <nav ref={ navRef } className='main-nav'>
          <figure>
             <img src={ logo } alt='logo' />
          </figure>

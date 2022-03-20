@@ -6,6 +6,9 @@ nav.main-nav {
    @include flex-sa-c;
    position: relative;
    color: $light-text;
+   top:0;
+   width: 100%;
+   z-index: 999999;
 
    figure {
       height: 60px;

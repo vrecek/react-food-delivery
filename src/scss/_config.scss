@@ -23,3 +23,17 @@ $darker-bg-t: rgba(30, 30, 30, .9);
    justify-content: space-between;
    align-items: center;
 }
+
+@mixin abs-50-50-b {
+   position: absolute;
+   left:50%;
+   bottom:50%;
+   transform: translate(-50%, -50%);
+}
+
+@mixin abs-50-50-t {
+   position: absolute;
+   left:50%;
+   top:50%;
+   transform: translate(-50%, -50%);
+}

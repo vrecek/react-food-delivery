@@ -91,3 +91,12 @@
       }
    }
 }
+
+   @media (max-width: 480px){
+      .ship-section {
+         height: auto;
+
+         figure { margin:3em 0; }
+         section { margin-bottom: 3em; }
+      }
+   } 

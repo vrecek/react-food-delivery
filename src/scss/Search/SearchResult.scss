@@ -1,0 +1,14 @@
+article.srch-res {
+   padding: .5em;
+   cursor: pointer;
+   font-family: 'Hubballi', cursive;
+   text-transform: uppercase;
+   border-radius: .2em;
+   transition: .3s;
+   
+
+   &:hover {
+      color:black;
+      background: cornflowerblue;
+   }
+}

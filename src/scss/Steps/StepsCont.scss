@@ -102,3 +102,10 @@ article.steps-cont {
       }
    }
 }
+
+@media (max-width: 480px){
+   article.steps-cont {
+      min-height: auto;
+      padding-bottom: 3em;
+   }
+} 
