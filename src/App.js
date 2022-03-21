@@ -9,6 +9,7 @@ import Sponsors from './components/Sponsors/Sponsors';
 import CommentSection from './components/Comments/CommentSection';
 import Footer from './components/Footer/Footer';
 import SearchCont from './components/Search/SearchCont';
+import SendContact from './components/SendContact/SendContact';
 import { AiOutlineArrowUp } from 'react-icons/ai'
 import { useRef, useEffect } from 'react';
 
@@ -56,7 +57,7 @@ function App() {
 
       <Sponsors />
 
-      {/* send opinion */}
+      <SendContact />
 
       <Footer />
     </div>

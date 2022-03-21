@@ -1,0 +1,112 @@
+@import '../config';
+
+.send-opinion {
+   height: 100vh;
+   background: $dark-bg-t;
+   @include flex-c-c;
+
+   h1,
+   h2 {
+      text-align: center;
+      font-family: 'Hubballi', cursive;
+   }
+
+   h1 {
+      font-size:1.5rem;
+   }
+
+   h2 {
+      font-size: 1rem;
+      margin-bottom: 1em;
+   }
+
+   form {
+      width: 920px;
+      max-width: 98%;
+      margin:0 auto;
+      padding: 1em 2em;
+      background: $darker-bg;
+      border: 2px solid $dark-bg;
+      border-radius: .2em;
+      box-shadow: 0 0 2px orange;
+      position: relative;
+
+      h3 {
+         @include abs-50-50-t;
+         font-family: 'Hubballi', cursive;
+         width: 100%;
+         padding:.5em 0;
+         text-align: center;
+         animation: anim 1s;
+         animation-delay: 1.5s;
+
+         @keyframes anim {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+         }
+
+         &.true { background: green; }
+         &.false { background: red; }
+      }
+
+      label { font-size: clamp(.85rem, 5vw, 1rem); }
+
+      div:last-of-type { margin: 1em 0 2em 0; }
+
+      button {
+         display: block;
+         margin: .5em auto 0 auto;
+         font-size: 1.1rem;
+         border:2px solid cornflowerblue;
+         background: none;
+         border-radius: .2em;
+         padding:.7em .5em;
+         color: $light-text;
+         cursor: pointer;
+         font-family: 'Hubballi', cursive;
+         transition: .3s;
+         outline: 0;
+
+         &:hover {
+            box-shadow: 0 0 2px royalblue, 0 0 4px royalblue, 0 0 8px royalblue;
+            background: #353535;
+         }
+      }
+
+      input,
+      textarea {
+         width: 100%;
+         background: #303030;
+         padding:.5em;
+         border:1px solid royalblue;
+         outline: 0;
+         font-family: 'Hubballi', cursive;
+         border-radius: .3em;
+         color: $light-text;
+         transition: .3s;
+      }
+
+      input {
+         font-size: clamp(1rem, 5vw, 1.5rem);
+      }
+
+      textarea {
+         height: 300px;
+         font-size: clamp(1rem, 5vw, 1.2rem);
+         word-spacing: 2px;
+         resize: none;
+      }
+   }
+}
+
+@media (max-width: 480px){
+   .send-opinion {
+      height: auto;
+      padding: 3em 0;
+
+      form {
+         padding: 1em;
+         textarea { height: 200px; }
+      }
+   }
+} 
